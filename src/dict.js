@@ -21,15 +21,26 @@ const safeGlobalDict = {
     "Import settings, extensions, and keybindings from VS Code": "导入 VS Code 的设置、扩展和快捷键绑定",
     "See warnings and tips that you've hidden": "查看您已隐藏的警告和提示",
     "Layout": "布局",
+    "Conversation Density": "对话密度",
+    "Choose how much detail Agent tool calls show in the conversation": "选择智能体工具调用在对话中显示的详细程度",
+    "Title Bar": "标题栏",
+    "Show title bar in agent layout": "在智能体布局中显示标题栏",
     "Status Bar": "状态栏",
     "Show status bar": "显示状态栏",
+    "Show status bar at the bottom of the window": "在窗口底部显示状态栏",
+    "Review Control Location": "审查控件位置",
+    "Show inline diff review controls in top level breadcrumbs or floating island": "在顶层面包屑或悬浮岛中显示内联差异审查控件",
     "Auto-hide editor when empty": "空闲时自动隐藏编辑器",
     "When all editors are closed, hide the editor area and maximize chat": "关闭所有编辑器时，隐藏编辑器并最大化聊天窗口",
+    "Open chat as editor tabs": "以编辑器标签页打开聊天",
+    "Show chats as editor tabs inside the chat area instead of the legacy stacked view": "在聊天区域内以编辑器标签页显示聊天，而不是旧版堆叠视图",
     "Notifications": "通知",
     "System Notifications": "系统通知",
     "Show system notifications when Agent completes or needs attention": "智能体完成任务或需要注意时显示系统通知",
     "System Tray Icon": "系统托盘图标",
     "Show Cursor in system tray": "在系统托盘显示 Cursor",
+    "Menu Bar Icon": "菜单栏图标",
+    "Show Cursor in menu bar": "在菜单栏中显示 Cursor",
     "Completion Sound": "完成提示音",
     "Play a sound when Agent finishes responding": "智能体完成响应时播放提示音",
     "Privacy": "隐私",
@@ -172,6 +183,10 @@ const safeGlobalDict = {
     "Privacy Mode": "隐私模式",
     "Your code data will not be trained on or used to improve the product. Code may be stored to provide features such as Background Agent.": "您的代码数据不会被用于训练或改进产品。代码可能会被存储以提供后台智能体等功能。",
     "Data Sharing is controlled by the team admin. Configure here.": "数据共享由团队管理员控制。在此配置。",
+    "Data Sharing Enabled": "数据共享已启用",
+    "Your codebase, prompts, edits and other usage data will be stored and trained on by Cursor to improve the product.": "您的代码库、提示词、编辑和其他使用数据将被 Cursor 存储并用于训练，以改进产品。",
+    "Data Sharing is controlled by your team admin.": "数据共享由您的团队管理员控制。",
+    "Learn more about Data Sharing.": "了解更多关于数据共享的信息。",
 
     // ── Miscellaneous ──
     "Accept the next word of a suggestion via Ctrl+RightArrow": "通过 Ctrl+RightArrow 接受建议的下一个词",
@@ -285,7 +300,76 @@ const safeGlobalDict = {
     "Nightly builds will silently download and install updates without prompting you.": "每夜版本将静默下载并安装更新，不会提示您。",
     "Keybinding: editor.action.inlineSuggest.acceptNextWord": "快捷键: editor.action.inlineSuggest.acceptNextWord",
     "Keybinding: ": "快捷键: ",
-    "Keybinding:": "快捷键:"
+    "Keybinding:": "快捷键:",
+
+    // ── Agents Window 横幅 ──
+    "Meet the new Agents Window": "认识全新的智能体窗口",
+    "Run many agents in parallel \\u2014 across repos, locally, on remote SSH, and in the cloud.": "并行运行多个智能体——跨仓库、本地、远程 SSH 以及云端。",
+    "Jump back to the Agents Window to keep working across repos.": "返回智能体窗口，继续跨仓库工作。",
+    "Try it now": "立即试用",
+
+    // ── 账号 ──
+    "Cursor Account": "Cursor 账号",
+
+    // ── 布局 ──
+    "Window Layout": "窗口布局",
+    "Switch between Agent and Editor default layouts": "在智能体与编辑器默认布局之间切换",
+    "Conversation Density": "对话密度",
+    "Choose how much detail Agent tool calls show in the conversation": "选择智能体工具调用在对话中显示的详细程度",
+    "Detailed": "详细",
+    "Compact": "紧凑",
+    "Title Bar": "标题栏",
+    "Show title bar in agent layout": "在智能体布局中显示标题栏",
+    "Show status bar at the bottom of the window": "在窗口底部显示状态栏",
+    "Review Control Location": "审查控件位置",
+    "Show inline diff review controls in top level breadcrumbs or floating island": "在顶部面包屑或浮动岛中显示内联差异审查控件",
+    "Breadcrumb": "面包屑",
+    "Floating Island": "浮动岛",
+    "Open chat as editor tabs": "以编辑器标签页打开聊天",
+    "Show chats as editor tabs inside the chat area instead of the legacy stacked view": "在聊天区域内以编辑器标签页显示聊天，而非旧版堆叠视图",
+
+    // ── 通知 ──
+    "Menu Bar Icon": "菜单栏图标",
+    "Show Cursor in menu bar": "在菜单栏中显示 Cursor",
+
+    // ── 隐私 (Legacy) ──
+    "Privacy Mode (Legacy)": "隐私模式（旧版）",
+    "Your code data will not be trained on or used to improve the product. We will not store your code.": "您的代码数据不会被用于训练或改进产品。我们不会存储您的代码。",
+    "Learn more about Data Sharing.": "了解更多数据共享信息。",
+
+    // ── 模式切换 / 子智能体 ──
+    "Auto-Approve Mode Transitions": "自动批准模式切换",
+    "Allow Agent to switch modes without asking first, such as Agent to Plan or Agent to Debug. When off, Cursor asks before switching.": "允许智能体在不先询问的情况下切换模式，例如从智能体切换到计划或调试模式。关闭时，Cursor 会在切换前询问。",
+    "Explore subagent model": "Explore 子智能体模型",
+    "The Explore subagent is used to do initial research for the main agent": "Explore 子智能体用于为主智能体进行初步调研",
+
+    // ── 批准与执行 / 运行模式 ──
+    "Approvals & Execution for commands, MCP and more": "命令、MCP 等的批准与执行",
+    "Choose how Agents run tools like command execution, MCP, and file writes.": "选择智能体如何运行命令执行、MCP 和文件写入等工具。",
+    "All commands will run without approval, classification or sandboxing.": "所有命令都将在无需批准、分类或沙箱隔离的情况下运行。",
+    "Run Everything (Unsandboxed)": "运行所有（无沙箱）",
+    "Allowlist (with Sandbox)": "白名单（带沙箱）",
+    "Auto-review (with Sandbox)": "自动审查（带沙箱）",
+
+    // ── Git ──
+    "Prefix for new branches created by Agent (e.g., cursor/, username/)": "智能体创建新分支时使用的前缀（例如 cursor/、username/）",
+
+    // ── Cursor Tab ──
+    "Glob patterns for files where Cursor Tab will not suggest": "Cursor Tab 不会提供建议的文件的 Glob 匹配模式",
+
+    // ── 云端智能体 ──
+    "Connect GitHub/GitLab, manage team and user settings, and configure environments": "连接 GitHub/GitLab，管理团队和用户设置并配置环境",
+    "Work with Cloud Agents from Slack": "通过 Slack 使用云端智能体",
+
+    // ── 插件 ──
+    "Browse the marketplace or import custom plugins to extend Cursor with Skills, Rules, Agents, Hooks, and MCPs.": "浏览插件市场或导入自定义插件，以通过技能、规则、智能体、钩子和 MCP 扩展 Cursor。",
+    "Search or Paste Link": "搜索或粘贴链接",
+
+    // ── 工具 / 浏览器 ──
+    "Connected to Browser Tab": "已连接到浏览器标签页",
+
+    // ── 钩子 ──
+    "Add a hooks.json file to your user, project, or enterprise config to start running custom scripts.": "在您的用户、项目或企业配置中添加 hooks.json 文件，即可开始运行自定义脚本。"
 };
 
 const riskyShortWords = {
@@ -341,7 +425,23 @@ const riskyShortWords = {
     "Cancel": "取消",
     "Confirm": "确认",
     "Hide": "隐藏",
-    "Edit": "编辑"
+    "Edit": "编辑",
+    "Detailed": "详细",
+    "Breadcrumb": "面包屑",
+
+    // ── 新增：短标签 / HTML 文本节点（仅 UI 上下文替换，避免误伤代码）──
+    "Browser Automation": "浏览器自动化",
+    "Auto-Approve Mode Transitions": "自动批准模式切换",
+    "Run Mode": "运行模式",
+    "Branch Prefix": "分支前缀",
+    "Ignored Files": "忽略的文件",
+    "Manage Settings": "管理设置",
+    "Connect Slack": "连接 Slack",
+    "No Plugins": "暂无插件",
+    "Add Plugin": "添加插件",
+    "Allowlist": "白名单",
+    "Learn more": "了解更多",
+    "Connect": "连接"
 };
 
 module.exports = { safeGlobalDict, riskyShortWords };
